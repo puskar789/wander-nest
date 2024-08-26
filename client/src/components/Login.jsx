@@ -4,27 +4,34 @@ import { Modal } from "flowbite-react";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { IoMdSend } from "react-icons/io";
-import { FaGoogle } from "react-icons/fa";
 import Register from "./Register";
 import useGlobal from "../zustand/useGlobal";
 import GoogleOneTapLogin from "./oauth/GoogleOneTapLogin";
+import toast from "react-hot-toast";
+import useLogin from "../hooks/useLogin";
 
 const Login = () => {
   // const [openModal, setOpenModal] = useState(false);
   const { openModal, setOpenModal } = useGlobal();
   const [showPassword, setShowPassword] = useState(false);
   const [openRegister, setOpenRegister] = useState(false);
+  const { loading, login } = useLogin();
 
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = inputs;
 
-    // implement loading
+    if (!email || !password) {
+      return toast.error("Please fill in all fields");
+    }
+
+    await login(email, password);
+
     setInputs({
       email: "",
       password: "",
@@ -108,7 +115,11 @@ const Login = () => {
 
               <div className="my-8 flex justify-end">
                 <button className="flex gap-2 bg-blue-500 px-4 py-2 text-white font-semibold text-sm rounded-lg shadow-lg hover:bg-blue-700 active:border-y-2 border-blue-900">
-                  SUBMIT
+                  {loading ? (
+                    <span className="loading loading-spinner"></span>
+                  ) : (
+                    "Login"
+                  )}
                   <IoMdSend className="text-xl" />
                 </button>
               </div>

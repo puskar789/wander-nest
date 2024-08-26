@@ -25,6 +25,9 @@ const GoogleOneTapLogin = () => {
 
   const handleGoogleLogin = () => {
     setDisable(true);
+    toast("Please wait 👌", {
+      duration: 1650,
+    });
 
     try {
       window.google.accounts.id.initialize({

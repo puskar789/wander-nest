@@ -2,8 +2,8 @@ import { Router } from "express";
 import { createRoom } from "../controllers/room.js";
 import auth from "../middleware/auth.js";
 
-const roomRouter = Router();
+const router = Router();
 
-roomRouter.post("/", auth, createRoom);
+router.post("/", auth, createRoom);
 
-export default roomRouter;
+export default router;

@@ -11,5 +11,8 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [flowbite.plugin()], // require("flowbite/plugin")],
+  plugins: [flowbite.plugin(), require("daisyui")], // require("flowbite/plugin")],
+  daisyui: {
+    themes: [],
+  },
 };

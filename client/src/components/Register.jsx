@@ -4,15 +4,16 @@ import { Modal } from "flowbite-react";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { IoMdSend } from "react-icons/io";
-import { FaGoogle } from "react-icons/fa";
 import useGlobal from "../zustand/useGlobal";
 import toast from "react-hot-toast";
 import GoogleOneTapLogin from "./oauth/GoogleOneTapLogin";
+import useRegister from "../hooks/useRegister";
 
 const Register = ({ setOpenRegister }) => {
   const { openModal, setOpenModal } = useGlobal();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const { loading, register } = useRegister();
 
   const [inputs, setInputs] = useState({
     name: "",
@@ -21,14 +22,26 @@ const Register = ({ setOpenRegister }) => {
     confirmPassword: "",
   });
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = inputs;
 
-    // implement loading
-    if (password !== confirmPassword) {
-      toast.error("Passwords do not match");
+    if (!name || !email || !password || !confirmPassword) {
+      return toast.error("Please fill in all fields");
     }
+
+    if (password !== confirmPassword) {
+      return toast.error("Passwords do not match");
+    }
+
+    await register(name, email, password);
+
+    setInputs({
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   };
 
   const onCloseModal = () => {
@@ -148,7 +161,11 @@ const Register = ({ setOpenRegister }) => {
 
           <div className="my-4 flex justify-end">
             <button className="flex gap-2 bg-blue-500 px-4 py-2 text-white font-semibold text-sm rounded-lg shadow-lg hover:bg-blue-700 active:border-y-2 border-blue-900">
-              SUBMIT
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Login"
+              )}
               <IoMdSend className="text-xl" />
             </button>
           </div>

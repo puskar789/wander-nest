@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import roomRouter from "./routes/roomRouter.js";
+import roomRouter from "./routes/room.router.js";
+import userRouter from "./routes/user.router.js";
+import mongoose from "mongoose";
 
 dotenv.config();
 
@@ -24,15 +26,18 @@ app.use((req, res, next) => {
 // limit is used to prevent DDoS attacks
 app.use(express.json({ limit: "10mb" }));
 
-app.use("/room", roomRouter);
+app.use("/api/user", userRouter);
+app.use("/api/room", roomRouter);
 
 // welcome message
-app.use("/", (req, res) => res.json({ message: "Welcome to our API" }));
+app.use("/api", (req, res) => res.json({ message: "Welcome to our API" }));
 // any other URL is being accessed
 app.use((req, res) =>
   res.status(404).json({ success: false, message: "Not Found" })
 );
 
-app.listen(port, () => {
+app.listen(port, async () => {
+  await mongoose.connect(process.env.MONGO_CONNECT);
+  console.log("Connected to MongoDB");
   console.log(`Server is running on port ${port}`);
 });

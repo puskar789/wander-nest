@@ -9,9 +9,11 @@ import { IoIosNotifications } from "react-icons/io";
 import { IoIosSettings } from "react-icons/io";
 import { MdOutlineLogout } from "react-icons/md";
 import { Popover } from "flowbite-react";
+import useGlobal from "../zustand/useGlobal";
 
 const NavBar = () => {
   const { authUser, setAuthUser } = useAuthContext();
+  const { setOpenModal } = useGlobal();
   // const handleLogin = () => {
   //   setAuthUser({
   //     name: "John",
@@ -20,6 +22,7 @@ const NavBar = () => {
   // };
 
   const handleLogout = () => {
+    setOpenModal(false);
     setAuthUser(null);
     localStorage.removeItem("currentUser");
   };
