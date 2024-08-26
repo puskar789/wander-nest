@@ -9,7 +9,6 @@ import { IoIosNotifications } from "react-icons/io";
 import { IoIosSettings } from "react-icons/io";
 import { MdOutlineLogout } from "react-icons/md";
 import { Popover } from "flowbite-react";
-import photoURL from "../assets/new_images.jpg";
 
 const NavBar = () => {
   const { authUser, setAuthUser } = useAuthContext();
@@ -22,6 +21,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     setAuthUser(null);
+    localStorage.removeItem("currentUser");
   };
 
   const content = (

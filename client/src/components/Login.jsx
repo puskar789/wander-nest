@@ -7,6 +7,7 @@ import { IoMdSend } from "react-icons/io";
 import { FaGoogle } from "react-icons/fa";
 import Register from "./Register";
 import useGlobal from "../zustand/useGlobal";
+import GoogleOneTapLogin from "./oauth/GoogleOneTapLogin";
 
 const Login = () => {
   // const [openModal, setOpenModal] = useState(false);
@@ -106,7 +107,7 @@ const Login = () => {
               </div>
 
               <div className="my-8 flex justify-end">
-                <button className="flex gap-2 bg-blue-500 px-4 py-2 text-white font-semibold text-sm rounded-lg shadow-lg">
+                <button className="flex gap-2 bg-blue-500 px-4 py-2 text-white font-semibold text-sm rounded-lg shadow-lg hover:bg-blue-700 active:border-y-2 border-blue-900">
                   SUBMIT
                   <IoMdSend className="text-xl" />
                 </button>
@@ -124,10 +125,7 @@ const Login = () => {
             </p>
 
             <div className="mt-8 flex justify-center">
-              <button className="flex gap-2 bg-white border border-blue-500 px-4 py-2 text-blue-500 font-semibold text-sm rounded-lg shadow-lg">
-                <FaGoogle className="text-xl" />
-                LOGIN WITH GOOGLE
-              </button>
+              <GoogleOneTapLogin />
             </div>
           </Modal.Body>
         </Modal>
