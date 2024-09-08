@@ -1,4 +1,5 @@
 import { OAuth2Client } from "google-auth-library";
+import jwt, { decode } from "jsonwebtoken";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
@@ -22,6 +23,9 @@ const auth = async (req, res, next) => {
       };
     } else {
       // jwt tokens
+      const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+      const { id, name, photoURL } = decodedToken;
+      req.user = { id, name, photoURL };
     }
     next();
   } catch (error) {

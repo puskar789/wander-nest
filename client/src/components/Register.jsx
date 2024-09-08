@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoIosLock } from "react-icons/io";
 import { Modal } from "flowbite-react";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";

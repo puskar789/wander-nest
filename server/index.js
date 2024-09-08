@@ -30,7 +30,7 @@ app.use("/api/user", userRouter);
 app.use("/api/room", roomRouter);
 
 // welcome message
-app.use("/api", (req, res) => res.json({ message: "Welcome to our API" }));
+app.get("/api", (req, res) => res.json({ message: "Welcome to our API" }));
 // any other URL is being accessed
 app.use((req, res) =>
   res.status(404).json({ success: false, message: "Not Found" })

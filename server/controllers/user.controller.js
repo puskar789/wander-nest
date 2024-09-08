@@ -90,3 +90,29 @@ export const login = async (req, res) => {
     });
   }
 };
+
+export const updateProfile = async (req, res) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.user.id,
+      { name: req.body.newName, photoURL: req.body.newPhotoURL },
+      {
+        new: true,
+      }
+    );
+
+    const { _id: id, name, photoURL } = updatedUser;
+    console.log(id, name, photoURL);
+    const token = jwt.sign({ id, name, photoURL }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
+
+    res.status(200).json({ success: true, result: { name, photoURL, token } });
+  } catch (error) {
+    console.log("error in user controller updateProfile", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong try again later",
+    });
+  }
+};

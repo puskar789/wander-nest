@@ -10,6 +10,7 @@ import { IoIosSettings } from "react-icons/io";
 import { MdOutlineLogout } from "react-icons/md";
 import { Popover } from "flowbite-react";
 import useGlobal from "../zustand/useGlobal";
+import Profile from "./Profile";
 
 const NavBar = () => {
   const { authUser, setAuthUser } = useAuthContext();
@@ -30,10 +31,7 @@ const NavBar = () => {
   const content = (
     <div className="w-32 text-gray-500 dark:text-gray-400 shadow-2xl">
       <div className="flex flex-col p-4 gap-4">
-        <div className="flex gap-3 cursor-pointer">
-          <IoIosSettings className="text-2xl" />
-          <h3 className="font-semibold">Profile</h3>
-        </div>
+        {!authUser?.google && <Profile />}
         <div className="flex gap-3 cursor-pointer" onClick={handleLogout}>
           <MdOutlineLogout className="text-2xl" />
           <h3 className="font-semibold">Logout</h3>
