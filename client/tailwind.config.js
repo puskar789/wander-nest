@@ -7,12 +7,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     flowbite.content(),
     // "node_modules/flowbite-react/lib/esm/**/*.js",
+    //"node_modules/daisyui/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},
   },
   plugins: [flowbite.plugin(), require("daisyui")], // require("flowbite/plugin")],
-  daisyui: {
-    themes: [],
-  },
 };
