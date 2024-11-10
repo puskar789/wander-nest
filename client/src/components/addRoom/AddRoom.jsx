@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddLocation from "./addLocation/AddLocation";
 import AddDetails from "./addDetails/AddDetails";
 import AddImages from "./addImages/AddImages";
+import useGlobal from "../../zustand/useGlobal";
 
 const AddRoom = () => {
+  const { images } = useGlobal();
+
   const [primaryStep, setPrimaryStep] = useState(0);
 
   const [steps, setSteps] = useState([
@@ -14,6 +17,24 @@ const AddRoom = () => {
 
   const handleStepClick = (index) => {
     setPrimaryStep(index);
+  };
+
+  useEffect(() => {
+    if (images.length > 0) {
+      if (!steps[2].isComplete) {
+        changeComplete(2, true);
+      }
+    } else {
+      if (steps[2].isComplete) {
+        changeComplete(2, false);
+      }
+    }
+  });
+
+  const changeComplete = (index, complete) => {
+    steps[index].isComplete = complete;
+    const newSteps = [...steps];
+    setSteps(newSteps);
   };
 
   return (
