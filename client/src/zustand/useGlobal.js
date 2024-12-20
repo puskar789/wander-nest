@@ -8,6 +8,10 @@ const useGlobal = create((set) => ({
     set((state) => ({
       images: typeof value === "function" ? value(state.images) : value,
     })),
+  lng: 0,
+  setLng: (value) => set({ lng: value }),
+  lat: 0,
+  setLat: (value) => set({ lat: value }),
 }));
 
 export default useGlobal;

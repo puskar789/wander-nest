@@ -5,7 +5,7 @@ import AddImages from "./addImages/AddImages";
 import useGlobal from "../../zustand/useGlobal";
 
 const AddRoom = () => {
-  const { images } = useGlobal();
+  const { images, lng, lat } = useGlobal();
 
   const [primaryStep, setPrimaryStep] = useState(0);
 
@@ -29,12 +29,28 @@ const AddRoom = () => {
         changeComplete(2, false);
       }
     }
-  });
+  }, [images]);
+
+  useEffect(() => {
+    if (lng || lat) {
+      if (!steps[0].isComplete) {
+        changeComplete(0, true);
+      }
+    } else {
+      if (steps[0].isComplete) {
+        changeComplete(0, false);
+      }
+    }
+  }, [lng, lat]);
 
   const changeComplete = (index, complete) => {
     steps[index].isComplete = complete;
     const newSteps = [...steps];
     setSteps(newSteps);
+  };
+
+  const detailsChangeHandler = (bool) => {
+    changeComplete(1, bool);
   };
 
   return (
@@ -52,16 +68,22 @@ const AddRoom = () => {
         ))}
       </ul>
 
-      <div>
+      <div className={primaryStep === 0 ? "h-[380px]" : ""}>
         {
           {
             0: <AddLocation />,
-            1: <AddDetails />,
+            1: <AddDetails onDetailsChange={detailsChangeHandler} />,
             2: <AddImages />,
           }[primaryStep]
         }
       </div>
-      <div className="my-12 mx-72 flex justify-between">
+      <div
+        className={
+          primaryStep != 2
+            ? "mt-4 px-72 flex justify-between"
+            : "my-12 mx-72 flex justify-between"
+        }
+      >
         <button
           className="font-semibold text-blue-500 hover:text-blue-200 disabled:text-slate-400"
           disabled={primaryStep === 0}
