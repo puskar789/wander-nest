@@ -3,9 +3,12 @@ import AddLocation from "./addLocation/AddLocation";
 import AddDetails from "./addDetails/AddDetails";
 import AddImages from "./addImages/AddImages";
 import useGlobal from "../../zustand/useGlobal";
+import { IoMdSend } from "react-icons/io";
+import useAddRoom from "../../hooks/useAddRoom";
 
-const AddRoom = () => {
-  const { images, lng, lat } = useGlobal();
+const AddRoom = ({ handleTabChange }) => {
+  const { lng, lat, price, title, description, images } = useGlobal();
+  const { loading, addRoom } = useAddRoom();
 
   const [primaryStep, setPrimaryStep] = useState(0);
 
@@ -15,8 +18,26 @@ const AddRoom = () => {
     { label: "Images", isComplete: false },
   ]);
 
+  const [submit, setSubmit] = useState(false);
+
   const handleStepClick = (index) => {
     setPrimaryStep(index);
+  };
+
+  const changeComplete = (index, complete) => {
+    steps[index].isComplete = complete;
+    const newSteps = [...steps];
+    setSteps(newSteps);
+  };
+
+  const detailsChangeHandler = (bool) => {
+    changeComplete(1, bool);
+  };
+
+  // handling the room submission
+  const handleSubmit = async () => {
+    // console.log("Submit");
+    await addRoom(lng, lat, price, title, description, images, handleTabChange);
   };
 
   useEffect(() => {
@@ -43,15 +64,22 @@ const AddRoom = () => {
     }
   }, [lng, lat]);
 
-  const changeComplete = (index, complete) => {
-    steps[index].isComplete = complete;
-    const newSteps = [...steps];
-    setSteps(newSteps);
-  };
-
-  const detailsChangeHandler = (bool) => {
-    changeComplete(1, bool);
-  };
+  useEffect(() => {
+    if (
+      steps[0].isComplete &&
+      steps[1].isComplete &&
+      steps[2].isComplete &&
+      primaryStep == 2
+    ) {
+      if (!submit) {
+        setSubmit(true);
+      }
+    } else {
+      if (submit) {
+        setSubmit(false);
+      }
+    }
+  }, [steps, primaryStep]);
 
   return (
     <div className="m-8 w-full">
@@ -98,6 +126,21 @@ const AddRoom = () => {
           Next
         </button>
       </div>
+      {submit && (
+        <div className="mt-6 flex justify-center">
+          <button
+            className="flex gap-2 px-4 py-2 bg-blue-500 text-white font-semibold shadow-lg rounded-lg hover:bg-blue-700 active:border-2 "
+            onClick={handleSubmit}
+          >
+            {loading ? (
+              <span className="loading loading-spinner"></span>
+            ) : (
+              "Submit"
+            )}
+            <IoMdSend className="text-2xl" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

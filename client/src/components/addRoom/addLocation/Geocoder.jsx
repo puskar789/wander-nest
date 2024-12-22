@@ -10,6 +10,7 @@ const Geocoder = () => {
     accessToken: import.meta.env.VITE_MAP_TOKEN,
     marker: false,
     collapsed: true,
+    placeholder: " ",
   });
 
   // useControl hook ensures that the geocoder is mounted as a control on the react-map-gl map.
