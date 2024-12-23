@@ -9,7 +9,21 @@ export const createRoom = async (req, res) => {
 
     res.status(201).json({ success: true, result: newRoom });
   } catch (error) {
-    console.log("error in user controller register", error);
+    console.log("error in room controller createRoom", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong try again later",
+    });
+  }
+};
+
+export const getRooms = async (req, res) => {
+  try {
+    // newest created first
+    const rooms = await Room.find().sort({ _id: -1 });
+    res.status(200).json({ success: true, result: rooms });
+  } catch (error) {
+    console.log("error in room controller getRooms", error);
     res.status(500).json({
       success: false,
       message: "Something went wrong try again later",

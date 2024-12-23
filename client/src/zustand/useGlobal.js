@@ -12,7 +12,7 @@ const useGlobal = create((set) => ({
   setTitle: (value) => set({ title: value }),
   description: "",
   setDescription: (value) => set({ description: value }),
-  price: 0,
+  price: 1,
   setPrice: (value) => set({ price: value }),
   radio: false,
   setRadio: (value) => set({ radio: value }),
@@ -20,6 +20,8 @@ const useGlobal = create((set) => ({
   setLng: (value) => set({ lng: value }),
   lat: 0,
   setLat: (value) => set({ lat: value }),
+  rooms: [],
+  setRooms: (value) => set({ rooms: value }),
 }));
 
 export default useGlobal;

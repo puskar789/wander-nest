@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import Room from "../models/room.model.js";
 
 export const register = async (req, res) => {
   try {
@@ -102,7 +103,14 @@ export const updateProfile = async (req, res) => {
     );
 
     const { _id: id, name, photoURL } = updatedUser;
-    console.log(id, name, photoURL);
+    // console.log(id, name, photoURL);
+
+    // needed as if user adds a room and then updates his profile, the room's user name and photoURL should be updated
+    await Room.updateMany(
+      { userId: id },
+      { userName: name, userPhoto: photoURL }
+    );
+
     const token = jwt.sign({ id, name, photoURL }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
