@@ -11,9 +11,12 @@ export const AuthContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("currentUser")) || null
   );
   const mapRef = useRef();
+  const containerRef = useRef();
 
   return (
-    <AuthContext.Provider value={{ authUser, setAuthUser, mapRef }}>
+    <AuthContext.Provider
+      value={{ authUser, setAuthUser, mapRef, containerRef }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -4,6 +4,7 @@ import useGetRooms from "../../hooks/useGetRooms";
 import ReactMapGL, { Marker } from "react-map-gl";
 import Supercluster from "supercluster";
 import { useAuthContext } from "../../context/AuthContext";
+import Geocoder from "../sidebar/Geocoder";
 
 // A radius of 75 pixels means that any points within a circle of 75 pixels will potentially be grouped into a cluster.
 // If the map is zoomed in close enough (e.g., zoom level 21), points that were previously grouped into a cluster will now be displayed as separate markers
@@ -135,6 +136,7 @@ const Cluster = () => {
             </Marker>
           );
         })}
+        <Geocoder />
       </ReactMapGL>
     </div>
   );

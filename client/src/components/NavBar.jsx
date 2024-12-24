@@ -3,7 +3,6 @@ import React from "react";
 import Login from "./Login";
 
 import { useAuthContext } from "../context/AuthContext";
-import { FiAlignJustify } from "react-icons/fi";
 import { IoMdMail } from "react-icons/io";
 import { IoIosNotifications } from "react-icons/io";
 import { IoIosSettings } from "react-icons/io";
@@ -11,6 +10,7 @@ import { MdOutlineLogout } from "react-icons/md";
 import { Popover } from "flowbite-react";
 import useGlobal from "../zustand/useGlobal";
 import Profile from "./Profile";
+import SideBar from "./sidebar/SideBar";
 
 const NavBar = () => {
   const { authUser, setAuthUser } = useAuthContext();
@@ -43,10 +43,8 @@ const NavBar = () => {
   return (
     <>
       <div className="bg-blue-600 flex justify-between px-16 py-4 shadow-xl">
-        <div className="flex gap-4">
-          <button>
-            <FiAlignJustify className="text-white text-2xl" />
-          </button>
+        <div className="flex justify-center items-center gap-4">
+          <SideBar />
           <h1 className="text-white font-semibold text-xl">You Are Welcome</h1>
         </div>
         {!authUser && (
