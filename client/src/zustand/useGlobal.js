@@ -12,7 +12,7 @@ const useGlobal = create((set) => ({
   setTitle: (value) => set({ title: value }),
   description: "",
   setDescription: (value) => set({ description: value }),
-  price: 1,
+  price: 0,
   setPrice: (value) => set({ price: value }),
   radio: false,
   setRadio: (value) => set({ radio: value }),

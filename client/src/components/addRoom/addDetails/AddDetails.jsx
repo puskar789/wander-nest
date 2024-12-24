@@ -58,6 +58,14 @@ const AddDetails = ({ onDetailsChange }) => {
     onDetailsChange(b1 && b2);
   }, [isTitleValid, isDesValid, title, description]);
 
+  useEffect(() => {
+    if (radio) {
+      setPrice(1);
+    } else {
+      setPrice(0);
+    }
+  }, [radio]);
+
   return (
     <div className="m-8 flex-col justify-center">
       <div className="w-full text-center">
