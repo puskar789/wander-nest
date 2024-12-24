@@ -11,7 +11,13 @@ const ctrl = new MapBoxGeocoder({
 
 const Geocoder = () => {
   const { mapRef, containerRef } = useAuthContext();
-  const { setFilterLng, setFilterLat, setFilterPrice } = useGlobal();
+  const {
+    rooms,
+    setFilterLng,
+    setFilterLat,
+    setFilterPrice,
+    setFilteredRooms,
+  } = useGlobal();
 
   useEffect(() => {
     if (containerRef?.current?.children[0]) {
@@ -29,6 +35,7 @@ const Geocoder = () => {
       setFilterLng(0);
       setFilterLat(0);
       setFilterPrice(50);
+      setFilteredRooms(rooms);
     });
   }, []);
   return null;

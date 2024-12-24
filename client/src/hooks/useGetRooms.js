@@ -4,7 +4,7 @@ import useGlobal from "../zustand/useGlobal";
 
 const useGetRooms = () => {
   const [loading, setLoading] = useState(false);
-  const { setRooms } = useGlobal();
+  const { setRooms, setFilteredRooms } = useGlobal();
 
   const getRooms = async () => {
     setLoading(true);
@@ -17,6 +17,7 @@ const useGetRooms = () => {
       }
 
       setRooms(data.result);
+      setFilteredRooms(data.result);
     } catch (error) {
       toast.error(error.message);
     } finally {

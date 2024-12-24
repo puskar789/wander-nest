@@ -14,7 +14,7 @@ const supercluster = new Supercluster({
 });
 
 const Cluster = () => {
-  const { rooms } = useGlobal();
+  const { filteredRooms } = useGlobal();
   const { mapRef } = useAuthContext();
   const { getRooms } = useGetRooms();
 
@@ -42,7 +42,7 @@ const Cluster = () => {
   // Transforms the raw rooms data into a format required by the Supercluster (GeoJSON features)
   useEffect(() => {
     // console.log(rooms);
-    const points = rooms.map((room) => ({
+    const points = filteredRooms.map((room) => ({
       type: "Feature",
       properties: {
         cluster: false, // means it is not a cluster i.e. it is a single room
@@ -62,7 +62,7 @@ const Cluster = () => {
       },
     }));
     setPoints(points);
-  }, [rooms]);
+  }, [filteredRooms]);
 
   useEffect(() => {
     supercluster.load(points);
