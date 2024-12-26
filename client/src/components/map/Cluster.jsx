@@ -5,6 +5,7 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import Supercluster from "supercluster";
 import { useAuthContext } from "../../context/AuthContext";
 import Geocoder from "../sidebar/Geocoder";
+import PopUp from "./PopUp";
 
 // A radius of 75 pixels means that any points within a circle of 75 pixels will potentially be grouped into a cluster.
 // If the map is zoomed in close enough (e.g., zoom level 21), points that were previously grouped into a cluster will now be displayed as separate markers
@@ -46,7 +47,7 @@ const Cluster = () => {
       type: "Feature",
       properties: {
         cluster: false, // means it is not a cluster i.e. it is a single room
-        roomId: room._id,
+        _id: room._id,
         price: room.price,
         title: room.title,
         description: room.description,
@@ -122,17 +123,17 @@ const Cluster = () => {
 
           return (
             <Marker
-              key={`room-${cluster.properties.roomId}`}
+              key={`room-${cluster.properties._id}`}
               longitude={longitude}
               latitude={latitude}
             >
-              <div className="tooltip" data-tip={cluster.properties.userName}>
+              <PopUp room={cluster.properties}>
                 <div className="avatar">
                   <div className="w-12 rounded-full">
                     <img src={cluster.properties.userPhoto} />
                   </div>
                 </div>
-              </div>
+              </PopUp>
             </Marker>
           );
         })}

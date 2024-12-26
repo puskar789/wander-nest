@@ -30,6 +30,8 @@ const useGlobal = create((set) => ({
   setFilterLat: (value) => set({ filterLat: value }),
   filteredRooms: [],
   setFilteredRooms: (value) => set({ filteredRooms: value }),
+  selectedRoom: null,
+  setSelectedRoom: (value) => set({ selectedRoom: value }),
 }));
 
 export default useGlobal;

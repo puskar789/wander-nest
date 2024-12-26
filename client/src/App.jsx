@@ -8,6 +8,7 @@ import Rooms from "./components/rooms/Rooms";
 import AddRoom from "./components/addRoom/AddRoom";
 import { useAuthContext } from "./context/AuthContext";
 import Protected from "./components/Protected";
+import useGlobal from "./zustand/useGlobal";
 
 function App() {
   const [currentTab, setCurrentTab] = useState(0);
