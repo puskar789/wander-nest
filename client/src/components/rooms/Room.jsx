@@ -12,9 +12,16 @@ const Room = ({ room }) => {
 
   // to get the address from the lng and lat (reverse geocoding)
   useEffect(() => {
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${
-      room.lng
-    },${room.lat}.json?access_token=${import.meta.env.VITE_MAP_TOKEN}`;
+    let url;
+    if ("lng" in room) {
+      url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${room.lng},${
+        room.lat
+      }.json?access_token=${import.meta.env.VITE_MAP_TOKEN}`;
+    } else {
+      url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${
+        room.longitude
+      },${room.latitude}.json?access_token=${import.meta.env.VITE_MAP_TOKEN}`;
+    }
     console.log(url);
     fetch(url)
       .then((res) => res.json())
