@@ -32,15 +32,16 @@ export const register = async (req, res) => {
     });
 
     if (user) {
-      const { _id: id, photoURL } = user;
+      const { _id: id, photoURL, isAdmin } = user;
       // these fields are required to be added along with the room records
       const token = jwt.sign({ id, name, photoURL }, process.env.JWT_SECRET, {
         expiresIn: "1h",
       });
 
-      res
-        .status(201)
-        .json({ success: true, result: { id, name, email, photoURL, token } });
+      res.status(201).json({
+        success: true,
+        result: { id, name, email, isAdmin, photoURL, token },
+      });
     }
   } catch (error) {
     console.log("error in user controller register", error);
@@ -75,14 +76,17 @@ export const login = async (req, res) => {
       });
     }
 
-    const { _id: id, name, photoURL } = existingUser;
+    const { _id: id, name, photoURL, isAdmin } = existingUser;
     const token = jwt.sign({ id, name, photoURL }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
     res
       .status(200)
-      .json({ success: true, result: { id, name, email, photoURL, token } });
+      .json({
+        success: true,
+        result: { id, name, email, isAdmin, photoURL, token },
+      });
   } catch (error) {
     console.log("error in user controller login", error);
     res.status(500).json({

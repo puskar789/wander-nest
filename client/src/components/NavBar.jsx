@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Login from "./Login";
-
 import { useAuthContext } from "../context/AuthContext";
 import { IoMdMail } from "react-icons/io";
 import { IoIosNotifications } from "react-icons/io";
@@ -11,6 +10,9 @@ import { Popover } from "flowbite-react";
 import useGlobal from "../zustand/useGlobal";
 import Profile from "./Profile";
 import SideBar from "./sidebar/SideBar";
+import toast from "react-hot-toast";
+import { MdDashboard } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const { authUser, setAuthUser } = useAuthContext();
@@ -26,12 +28,19 @@ const NavBar = () => {
     setOpenModal(false);
     setAuthUser(null);
     localStorage.removeItem("currentUser");
+    toast.success("Logged out successfully");
   };
 
   const content = (
-    <div className="w-32 text-gray-500 dark:text-gray-400 shadow-2xl">
+    <div className="w-36 text-gray-500 dark:text-gray-400 shadow-2xl">
       <div className="flex flex-col p-4 gap-4">
         {!authUser?.google && <Profile />}
+        <div className="flex gap-3 cursor-pointer">
+          <MdDashboard className="text-2xl" />
+          <Link className="font-semibold outline-none" to="/dashboard">
+            Dashboard
+          </Link>
+        </div>
         <div className="flex gap-3 cursor-pointer" onClick={handleLogout}>
           <MdOutlineLogout className="text-2xl" />
           <h3 className="font-semibold">Logout</h3>
