@@ -10,7 +10,7 @@ import {
 import { TbBellRingingFilled } from "react-icons/tb";
 import { useAuthContext } from "../../context/AuthContext";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 
 const SideList = () => {
@@ -44,36 +44,51 @@ const SideList = () => {
           <FiAlignJustify className="text-white" />
         )}
       </button>
-      <button className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200">
+      <Link
+        to="/dashboard"
+        className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200"
+      >
         <MdDashboard />
         {openSideList && (
           <span className="ml-6 w-40 text-left text-lg">Main</span>
         )}
-      </button>
-      <button className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200">
+      </Link>
+      <Link
+        to="/dashboard/users"
+        className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200"
+      >
         <MdPeopleAlt />
         {openSideList && (
           <span className="ml-6 w-40 text-left text-lg">Users</span>
         )}
-      </button>
-      <button className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200">
+      </Link>
+      <Link
+        to="/dashboard/rooms"
+        className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200"
+      >
         <MdBed />
         {openSideList && (
           <span className="ml-6 w-40 text-left text-lg">Rooms</span>
         )}
-      </button>
-      <button className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200">
+      </Link>
+      <Link
+        to="/dashboard/requests"
+        className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200"
+      >
         <TbBellRingingFilled />
         {openSideList && (
           <span className="ml-6 w-40 text-left text-lg">Requests</span>
         )}
-      </button>
-      <button className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200">
+      </Link>
+      <Link
+        to="/dashboard/messages"
+        className="w-full p-3 flex justify-center items-center focus:bg-indigo-100 active:bg-gray-200"
+      >
         <MdMarkChatUnread />
         {openSideList && (
           <span className="ml-6 w-40 text-left text-lg">Messages</span>
         )}
-      </button>
+      </Link>
       <div className="bg-slate-300 w-full h-[1px]"></div>
       <div className="flex-1 mt-4 text-center">
         <div className="flex justify-center items-start">

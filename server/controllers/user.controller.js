@@ -81,12 +81,10 @@ export const login = async (req, res) => {
       expiresIn: "1h",
     });
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        result: { id, name, email, isAdmin, photoURL, token },
-      });
+    res.status(200).json({
+      success: true,
+      result: { id, name, email, isAdmin, photoURL, token },
+    });
   } catch (error) {
     console.log("error in user controller login", error);
     res.status(500).json({
@@ -122,6 +120,21 @@ export const updateProfile = async (req, res) => {
     res.status(200).json({ success: true, result: { name, photoURL, token } });
   } catch (error) {
     console.log("error in user controller updateProfile", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong try again later",
+    });
+  }
+};
+
+export const getUsers = async (req, res) => {
+  try {
+    const users = await User.find().select("-password").sort({ _id: -1 });
+    if (users) {
+      res.status(200).json({ success: true, result: users });
+    }
+  } catch (error) {
+    console.log("error in user controller getUsers", error);
     res.status(500).json({
       success: false,
       message: "Something went wrong try again later",

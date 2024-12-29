@@ -32,6 +32,8 @@ const useGlobal = create((set) => ({
   setFilteredRooms: (value) => set({ filteredRooms: value }),
   selectedRoom: null,
   setSelectedRoom: (value) => set({ selectedRoom: value }),
+  users: [],
+  setUsers: (value) => set({ users: value }),
 }));
 
 export default useGlobal;

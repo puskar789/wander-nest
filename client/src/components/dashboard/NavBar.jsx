@@ -5,7 +5,7 @@ import { IoMdHome } from "react-icons/io";
 
 const NavBar = () => {
   return (
-    <div className="h-16 flex-1 flex gap-3 bg-blue-600 px-10 py-4 shadow-xl">
+    <div className="min-h-16 flex gap-3 bg-blue-600 px-10 py-4 shadow-xl">
       <Link className="font-semibold cursor-pointer" to="/">
         <IoMdHome className="text-white text-3xl" />
       </Link>
