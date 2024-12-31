@@ -5,6 +5,9 @@ import useGlobal from "../../zustand/useGlobal";
 import useGetUsers from "../../hooks/useGetUsers";
 import UserCard from "../../components/dashboard/UserCard";
 import RoomCard from "../../components/dashboard/RoomCard";
+import PieRoomsCost from "../../components/dashboard/PieRoomsCost";
+import { Area } from "recharts";
+import AreaRoomsUsers from "../../components/dashboard/AreaRoomsUsers";
 
 const DashboardHome = () => {
   const { users, rooms } = useGlobal();
@@ -36,17 +39,27 @@ const DashboardHome = () => {
 
   return (
     <div className="grid grid-cols-3 grid-rows-3 gap-6">
-      <div className="max-h-52 text-center p-8 rounded-md shadow-lg border-2">
-        <h1 className="text-3xl text-black">Total Users</h1>
-        <MdPeopleAlt className="inline-block text-8xl" />
-        <span className="text-black text-3xl">25</span>
+      <div className="text-center rounded-md shadow-lg border-2 flex flex-col justify-center items-center">
+        <h1 className="text-5xl text-black">Total Users</h1>
+        <div>
+          <MdPeopleAlt className="inline-block text-9xl" />
+          <span className="text-black text-5xl">{users.length}</span>
+        </div>
       </div>
-      <div className="max-h-52 text-center p-8 rounded-md shadow-lg border-2">
-        <h1 className="text-black text-3xl">Total Rooms</h1>
-        <BiSolidBuildingHouse className="inline-block text-8xl" />
-        <span className="text-black text-3xl">25</span>
+      <div className="text-center rounded-md shadow-lg border-2 flex flex-col justify-center items-center">
+        <h1 className="text-black text-5xl">Total Rooms</h1>
+        <div>
+          <BiSolidBuildingHouse className="inline-block text-9xl" />
+          <span className="text-black text-5xl">{rooms.length}</span>
+        </div>
       </div>
-      <div className="row-span-3 rounded-md shadow-lg border-2">
+      <div className="rounded-md shadow-lg border-2 col-span-2">
+        <PieRoomsCost />
+      </div>
+      <div className="rounded-md shadow-lg border-2 col-span-2">
+        <AreaRoomsUsers />
+      </div>
+      <div className="row-span-3 rounded-md shadow-lg border-2 row-start-1 col-start-3">
         <h1 className="mt-4 mb-2 text-center text-black font-semibold text-xl">
           Recently Added Users
         </h1>

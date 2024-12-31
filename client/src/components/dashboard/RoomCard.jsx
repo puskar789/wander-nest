@@ -28,7 +28,7 @@ const RoomCard = ({ room, idx }) => {
           <img src={room.images[0]} alt="room" />
         </div>
       </div>
-      <div className={`py-4 ${idx != 3 ? "border-b-2" : ""}`}>
+      <div className={`w-full py-4 ${idx != 3 ? "border-b-2" : ""}`}>
         <h3 className="text-black font-semibold">{room.title}</h3>
         <h3>{"Added: " + timeAgo(room.createdAt)}</h3>
       </div>
