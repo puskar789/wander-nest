@@ -1,29 +1,32 @@
 import { useState } from "react";
-import toast from "react-hot-toast";
-import useGlobal from "../zustand/useGlobal";
 import { useAuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
-const useGetUsers = () => {
+const useUpdateStatus = () => {
   const [loading, setLoading] = useState(false);
-  const { setUsers } = useGlobal();
   const { authUser } = useAuthContext();
-  const getUsers = async () => {
+
+  const updateStatus = async (isAdmin, userId, setRowId, setSuccess) => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3000/api/user/getusers", {
-        method: "GET",
+      const res = await fetch(`/api/user/updatestatus/${userId}`, {
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${authUser.token}`,
         },
+        body: JSON.stringify({ isAdmin }),
       });
 
       const data = await res.json();
+
       if (!data.success) {
         throw new Error(data.message);
       }
 
-      setUsers(data.result);
+      toast.success(`Role of user ${data.result._id} updated successfully`);
+      setRowId(null);
+      setSuccess(true);
     } catch (error) {
       toast.error(error.message);
     } finally {
@@ -31,7 +34,7 @@ const useGetUsers = () => {
     }
   };
 
-  return { loading, getUsers };
+  return { loading, updateStatus };
 };
 
-export default useGetUsers;
+export default useUpdateStatus;

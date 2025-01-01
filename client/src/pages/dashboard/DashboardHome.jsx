@@ -8,19 +8,33 @@ import RoomCard from "../../components/dashboard/RoomCard";
 import PieRoomsCost from "../../components/dashboard/PieRoomsCost";
 import { Area } from "recharts";
 import AreaRoomsUsers from "../../components/dashboard/AreaRoomsUsers";
+import useGetRooms from "../../hooks/useGetRooms";
 
 const DashboardHome = () => {
   const { users, rooms } = useGlobal();
   const { getUsers } = useGetUsers();
   const [newUsers, setNewUsers] = useState([]);
   const [newRooms, setNewRooms] = useState([]);
+  const { getRooms } = useGetRooms();
 
   useEffect(() => {
     const fetchUsers = async () => {
       await getUsers();
     };
 
-    fetchUsers();
+    if (users.length === 0) {
+      fetchUsers();
+    }
+  }, []);
+
+  useEffect(() => {
+    const fetchRooms = async () => {
+      await getRooms();
+    };
+
+    if (rooms.length === 0) {
+      fetchRooms();
+    }
   }, []);
 
   useEffect(() => {

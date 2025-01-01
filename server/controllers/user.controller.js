@@ -141,3 +141,17 @@ export const getUsers = async (req, res) => {
     });
   }
 };
+
+export const updateStatus = async (req, res) => {
+  try {
+    const { isAdmin } = req.body;
+    await User.findByIdAndUpdate({ _id: req.params.userId }, { isAdmin });
+    res.status(200).json({ success: true, result: { _id: req.params.userId } });
+  } catch (error) {
+    console.log("error in user controller updateStatus", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong try again later",
+    });
+  }
+};

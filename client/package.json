@@ -10,7 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@mapbox/mapbox-gl-geocoder": "^5.0.3",
+    "@mui/icons-material": "^6.3.0",
+    "@mui/material": "^6.3.0",
+    "@mui/x-data-grid": "^7.23.5",
     "firebase": "^10.13.1",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
