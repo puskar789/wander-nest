@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import useGlobal from "../zustand/useGlobal";
 
 const useUpdateStatus = () => {
   const [loading, setLoading] = useState(false);
   const { authUser } = useAuthContext();
+  const { setUsers } = useGlobal();
 
   const updateStatus = async (isAdmin, userId, setRowId, setSuccess) => {
     setLoading(true);
@@ -27,6 +29,7 @@ const useUpdateStatus = () => {
       toast.success(`Role of user ${data.result._id} updated successfully`);
       setRowId(null);
       setSuccess(true);
+      setUsers(data.result.users);
     } catch (error) {
       toast.error(error.message);
     } finally {

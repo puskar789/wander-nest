@@ -87,7 +87,6 @@ const Users = () => {
             },
           }}
           onCellEditStop={(params) => {
-            console.log(params.id);
             setRowId(params.id);
           }}
         />

@@ -30,3 +30,18 @@ export const getRooms = async (req, res) => {
     });
   }
 };
+
+export const deleteRoom = async (req, res) => {
+  try {
+    const _id = req.params.roomId;
+    await Room.findByIdAndDelete(_id);
+    const rooms = await Room.find().sort({ _id: -1 });
+    res.status(200).json({ success: true, result: rooms });
+  } catch (error) {
+    console.log("error in room controller deleteRoom", error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong try again later",
+    });
+  }
+};

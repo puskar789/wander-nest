@@ -146,7 +146,12 @@ export const updateStatus = async (req, res) => {
   try {
     const { isAdmin } = req.body;
     await User.findByIdAndUpdate({ _id: req.params.userId }, { isAdmin });
-    res.status(200).json({ success: true, result: { _id: req.params.userId } });
+    const users = await User.find().select("-password").sort({ _id: -1 });
+    if (users) {
+      res
+        .status(200)
+        .json({ success: true, result: { users, _id: req.params.userId } });
+    }
   } catch (error) {
     console.log("error in user controller updateStatus", error);
     res.status(500).json({
