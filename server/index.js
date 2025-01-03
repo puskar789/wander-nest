@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import roomRouter from "./routes/room.router.js";
 import userRouter from "./routes/user.router.js";
+import otpRouter from "./routes/otp.router.js";
 import mongoose from "mongoose";
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.use(express.json({ limit: "10mb" }));
 
 app.use("/api/user", userRouter);
 app.use("/api/room", roomRouter);
+app.use("/api/otp", otpRouter);
 
 // welcome message
 app.get("/api", (req, res) => res.json({ message: "Welcome to our API" }));

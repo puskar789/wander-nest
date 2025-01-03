@@ -54,7 +54,9 @@ const NavBar = () => {
       <div className="bg-blue-600 flex justify-between px-16 py-4 shadow-xl">
         <div className="flex justify-center items-center gap-4">
           <SideBar />
-          <h1 className="text-white font-semibold text-xl">You Are Welcome</h1>
+          <h1 className="text-white font-semibold text-xl">
+            Welcome To Wander Nest
+          </h1>
         </div>
         {!authUser && (
           <div className="flex gap-2 cursor-pointer p-1">
