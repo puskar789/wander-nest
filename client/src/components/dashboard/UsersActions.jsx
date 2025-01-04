@@ -9,8 +9,8 @@ const UsersActions = ({ params, rowId, setRowId }) => {
   const { loading, updateStatus } = useUpdateStatus();
 
   const handleSubmit = async () => {
-    const { isAdmin, _id } = params.row;
-    await updateStatus(isAdmin, _id, setRowId, setSuccess);
+    const { isAdmin, active, _id } = params.row;
+    await updateStatus(isAdmin, active, _id, setRowId, setSuccess);
   };
 
   useEffect(() => {

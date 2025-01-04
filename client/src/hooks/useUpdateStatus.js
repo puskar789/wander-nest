@@ -8,7 +8,13 @@ const useUpdateStatus = () => {
   const { authUser } = useAuthContext();
   const { setUsers } = useGlobal();
 
-  const updateStatus = async (isAdmin, userId, setRowId, setSuccess) => {
+  const updateStatus = async (
+    isAdmin,
+    active,
+    userId,
+    setRowId,
+    setSuccess
+  ) => {
     setLoading(true);
     try {
       const res = await fetch(`/api/user/updatestatus/${userId}`, {
@@ -17,7 +23,7 @@ const useUpdateStatus = () => {
           "Content-Type": "application/json",
           authorization: `Bearer ${authUser.token}`,
         },
-        body: JSON.stringify({ isAdmin }),
+        body: JSON.stringify({ isAdmin, active }),
       });
 
       const data = await res.json();
@@ -26,7 +32,7 @@ const useUpdateStatus = () => {
         throw new Error(data.message);
       }
 
-      toast.success(`Role of user ${data.result._id} updated successfully`);
+      toast.success(`Status of user ${data.result._id} updated successfully`);
       setRowId(null);
       setSuccess(true);
       setUsers(data.result.users);

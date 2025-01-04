@@ -32,7 +32,7 @@ export const register = async (req, res) => {
     });
 
     if (user) {
-      const { _id: id, photoURL, isAdmin } = user;
+      const { _id: id, photoURL, isAdmin, active } = user;
       // these fields are required to be added along with the room records
       const token = jwt.sign({ id, name, photoURL }, process.env.JWT_SECRET, {
         expiresIn: "1h",
@@ -40,7 +40,7 @@ export const register = async (req, res) => {
 
       res.status(201).json({
         success: true,
-        result: { id, name, email, isAdmin, photoURL, token },
+        result: { id, name, email, isAdmin, active, photoURL, token },
       });
     }
   } catch (error) {
@@ -64,6 +64,13 @@ export const login = async (req, res) => {
       });
     }
 
+    if (!existingUser.active) {
+      return res.status(400).json({
+        success: false,
+        message: "You have been banned. Please contact the Admin.",
+      });
+    }
+
     const isPasswordCorrect = await bcrypt.compare(
       password,
       existingUser.password
@@ -76,14 +83,14 @@ export const login = async (req, res) => {
       });
     }
 
-    const { _id: id, name, photoURL, isAdmin } = existingUser;
+    const { _id: id, name, photoURL, isAdmin, active } = existingUser;
     const token = jwt.sign({ id, name, photoURL }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
     res.status(200).json({
       success: true,
-      result: { id, name, email, isAdmin, photoURL, token },
+      result: { id, name, email, isAdmin, active, photoURL, token },
     });
   } catch (error) {
     console.log("error in user controller login", error);
@@ -144,8 +151,11 @@ export const getUsers = async (req, res) => {
 
 export const updateStatus = async (req, res) => {
   try {
-    const { isAdmin } = req.body;
-    await User.findByIdAndUpdate({ _id: req.params.userId }, { isAdmin });
+    const { isAdmin, active } = req.body;
+    await User.findByIdAndUpdate(
+      { _id: req.params.userId },
+      { isAdmin, active }
+    );
     const users = await User.find().select("-password").sort({ _id: -1 });
     if (users) {
       res

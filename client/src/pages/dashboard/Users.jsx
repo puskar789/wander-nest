@@ -33,6 +33,13 @@ const Users = () => {
       editable: true,
     },
     {
+      field: "active",
+      headerName: "Active",
+      width: 100,
+      type: "boolean",
+      editable: true,
+    },
+    {
       field: "createdAt",
       headerName: "Created At",
       width: 200,
@@ -62,7 +69,7 @@ const Users = () => {
 
   return (
     <div className="flex justify-center">
-      <Box sx={{ height: 400, width: "76%" }}>
+      <Box sx={{ height: 400, width: "83%" }}>
         <Typography
           variant="h3"
           component="h3"
