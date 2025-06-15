@@ -7,13 +7,16 @@ const useVerifyOtp = () => {
   const verifyOtp = async (email, otp, setOpenOtpPage) => {
     setLoading(true);
     try {
-      const res = await fetch("api/otp/verify-otp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, otp }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/otp/verify-otp`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, otp }),
+        }
+      );
 
       const data = await res.json();
       if (!data.success) {

@@ -17,14 +17,17 @@ const useUpdateStatus = () => {
   ) => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/user/updatestatus/${userId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${authUser.token}`,
-        },
-        body: JSON.stringify({ isAdmin, active }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/user/updatestatus/${userId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${authUser.token}`,
+          },
+          body: JSON.stringify({ isAdmin, active }),
+        }
+      );
 
       const data = await res.json();
 

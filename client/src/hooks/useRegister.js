@@ -11,11 +11,14 @@ const useRegister = () => {
   const register = async (name, email, password) => {
     setLoading(true);
     try {
-      const res = await fetch("/api/user/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/user/register`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, password }),
+        }
+      );
 
       const data = await res.json();
       // console.log(data);

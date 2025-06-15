@@ -9,7 +9,9 @@ const useGetRooms = () => {
   const getRooms = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3000/api/room/get");
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/room/get`
+      );
 
       const data = await res.json();
       if (!data.success) {

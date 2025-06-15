@@ -10,13 +10,16 @@ const useGetUsers = () => {
   const getUsers = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3000/api/user/getusers", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${authUser.token}`,
-        },
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/user/getusers`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${authUser.token}`,
+          },
+        }
+      );
 
       const data = await res.json();
       if (!data.success) {

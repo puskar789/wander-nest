@@ -7,13 +7,16 @@ const useGetOtp = () => {
   const getOtp = async (email, setOpenOtpPage) => {
     setLoading(true);
     try {
-      const res = await fetch("api/otp/get-otp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/otp/get-otp`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
 
       const data = await res.json();
       if (!data.success) {

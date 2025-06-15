@@ -12,7 +12,7 @@ const useDeleteRoom = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:3000/api/room/delete/${roomId}`,
+        `${import.meta.env.VITE_SERVER_URL}/api/room/delete/${roomId}`,
         {
           method: "DELETE",
           headers: {

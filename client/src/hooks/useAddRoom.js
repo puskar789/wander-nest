@@ -27,14 +27,17 @@ const useAddRoom = () => {
   ) => {
     setLoading(true);
     try {
-      const res = await fetch("api/room/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${authUser?.token}`,
-        },
-        body: JSON.stringify({ lng, lat, price, title, description, images }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/room/add`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${authUser?.token}`,
+          },
+          body: JSON.stringify({ lng, lat, price, title, description, images }),
+        }
+      );
 
       const data = await res.json();
       if (!data.success) {
