@@ -67,7 +67,7 @@ Here are some screenshots showcasing the Wander Nest web app:
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(281).png?alt=media&token=95b7bd22-8ac1-4b1f-a266-684f7caf9801)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(301).png?alt=media&token=7950eee8-c3a7-4c1d-9993-60582ac47d43)
 
-## User Profile ##
+## Admin Dashboard ##
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(310).png?alt=media&token=4b9290be-acbd-4cfd-af2b-4a84a1e1fa9d)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(309).png?alt=media&token=5b694e9f-727c-4082-89cd-bfd05817dea8)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(307).png?alt=media&token=5e960301-2f29-44d1-9660-2960cc34a3e1)
