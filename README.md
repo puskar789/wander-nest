@@ -8,7 +8,7 @@ Wander Nest is a full-stack web application designed to provide users with a sea
 * **User Authentication & Authorization**: Secure sign-up and login using JWT and bcrypt. Users can also log in with their Google account via OAuth for a faster experience.
 * **OTP Verification**: Enhance account security with OTP-based email verification during sign-up implemented using Nodemailer, ensuring only valid users access the platform.
 * **Profile Management**: Users can update their profile details and manage sessions efficiently through a user-friendly interface.
-* **Room Listings & CRUD Operations**: Users and admins can create, view, and delete rental room listings with detailed descriptions, pricing, and amenities, allows easy image uploads by providing drag and drop feature implemented using react dropzone.
+* **Room Listings & CRUD Operations**: Users and admins can create, view, and delete rental room listings with detailed descriptions, pricing, and amenities, allows easy image uploads by providing drag and drop feature implemented using react dropzone, users can efficiently filter the rooms by location and also by price.
 * **Image Uploads & Carousels**: Upload multiple images for each roomm, facilitated by Firebase and view them in a beautiful, responsive Swiper.js-powered image carousel.
 * **Map Integration**: Pinpoint room locations using Mapbox geocoding, allowing users to visually locate listings on an interactive map.
 * **Admin Dashboard**: A dedicated analytics dashboard where admins can view user activity, room stats, and manage everything from one place using Recharts for visual insights, admin can also ban malicious users.
@@ -29,10 +29,15 @@ Wander Nest is a full-stack web application designed to provide users with a sea
 Here are some screenshots showcasing the Ping Pal web app:
 
 ## Login and Sign Up Screen ##
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(269).png?alt=media&token=289e29da-0993-4a65-be26-bea202673b81)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(270).png?alt=media&token=674d4185-cd4e-4317-8d8d-fde33ae908de)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(271).png?alt=media&token=b877510a-761c-4a16-ad8b-8e55eec60fca)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(273).png?alt=media&token=e0ef0084-bf8b-488e-931a-bd13c95c25ee)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(64).png?alt=media&token=8d2912ee-e9d2-416f-a69d-94cbb6c89c12)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(66).png?alt=media&token=459dae94-2ea0-4003-9fb0-8c9413d7e8b8)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(68).png?alt=media&token=e47c8a58-6d66-4a0c-8b95-bea401cfade2)
+
+## OTP Verifiction ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(69).png?alt=media&token=02eba28a-2a4a-4c7e-833c-5e149f4c5ee6)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FWhatsApp%20Image%202025-06-16%20at%2015.00.04.jpeg?alt=media&token=eb43fbac-16fb-442c-9dfc-487a2f7d6155)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(70).png?alt=media&token=0fdb3a25-dd2a-42d5-b863-3386966a98f7)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(71).png?alt=media&token=23a639e4-6aef-4632-ad3b-3470626f481d)
 
 ## Chat Interface ##
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(275).png?alt=media&token=df5a716d-e8f3-451f-a05f-f0aa81bcbacf)
