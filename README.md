@@ -32,22 +32,49 @@ Here are some screenshots showcasing the Ping Pal web app:
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(64).png?alt=media&token=8d2912ee-e9d2-416f-a69d-94cbb6c89c12)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(66).png?alt=media&token=459dae94-2ea0-4003-9fb0-8c9413d7e8b8)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(68).png?alt=media&token=e47c8a58-6d66-4a0c-8b95-bea401cfade2)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(72).png?alt=media&token=812884fe-0e1b-4a9e-8807-381705313951)
 
-## OTP Verifiction ##
+## OTP Verification ##
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(69).png?alt=media&token=02eba28a-2a4a-4c7e-833c-5e149f4c5ee6)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FWhatsApp%20Image%202025-06-16%20at%2015.00.04.jpeg?alt=media&token=eb43fbac-16fb-442c-9dfc-487a2f7d6155)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(70).png?alt=media&token=0fdb3a25-dd2a-42d5-b863-3386966a98f7)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(71).png?alt=media&token=23a639e4-6aef-4632-ad3b-3470626f481d)
 
-## Chat Interface ##
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(275).png?alt=media&token=df5a716d-e8f3-451f-a05f-f0aa81bcbacf)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(282).png?alt=media&token=7746dc18-85f2-4f3b-bcd4-8016c24985d8)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(283).png?alt=media&token=5be1fa44-fbe4-4e50-a314-f840186bca4f)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(284).png?alt=media&token=d32b042c-9452-43cd-82fb-d560cd02db16)
+## User Interface ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(62).png?alt=media&token=86d556c6-31cf-4f4c-a8ed-aac8505b7020)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(63).png?alt=media&token=a294e696-e251-4d43-abba-1bfbab8962a0)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(74).png?alt=media&token=2fa48977-a8d1-4e95-89a9-81660bed6c2c)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(75).png?alt=media&token=df19a356-edde-4d1e-aec5-1cb20eb89fad)
+
+## Adding a Room ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(77).png?alt=media&token=36caf61d-57df-4f37-82e1-725f1caf07da)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(78).png?alt=media&token=c31d6886-16f1-4801-9876-b83eb85e2c9c)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(79).png?alt=media&token=7fc0136e-370d-419b-8852-a2366f3adaee)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(80).png?alt=media&token=9898559f-32e2-4c57-832a-14c7ce36cf9a)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(201).png?alt=media&token=46760ce4-9947-4481-a547-1e07e84275f6)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(202).png?alt=media&token=5928d408-0d8c-4499-bcc2-094e34539bd3)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(203).png?alt=media&token=558d8c3d-30f8-4cbb-b725-ee4d14a06df5)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(204).png?alt=media&token=6ba7fa95-0292-49cd-aeb8-9140d8a9e115)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(205).png?alt=media&token=a790810d-bcb5-4b7d-aad6-d1fc0f0aa0e7)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(277).png?alt=media&token=17bcb728-5f73-46c1-986e-a0bfb5a79281)
 
 ## User Profile ##
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(276).png?alt=media&token=d8aacec5-a6e2-4711-b1ad-451fd025a7ef)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(278).png?alt=media&token=0dca0ff3-54eb-4afc-aad2-3950b79258d1)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(279).png?alt=media&token=e2439a66-be95-4b19-aae3-fe4b1658693f)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/ping-pal.appspot.com/o/Screenshot%20(280).png?alt=media&token=eb549507-7c79-47ae-a6b3-82f10171c62b)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(236).png?alt=media&token=9deb3fe1-01fe-4f68-832f-3395bda97d66)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(240).png?alt=media&token=b4f62c7c-6f09-4a73-b079-58945c90abbd)
 
+## User Dashboard ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(274).png?alt=media&token=abd8f7a5-0e13-4131-bfc8-173a35234034)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(281).png?alt=media&token=95b7bd22-8ac1-4b1f-a266-684f7caf9801)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(301).png?alt=media&token=7950eee8-c3a7-4c1d-9993-60582ac47d43)
+
+## User Profile ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(310).png?alt=media&token=4b9290be-acbd-4cfd-af2b-4a84a1e1fa9d)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(309).png?alt=media&token=5b694e9f-727c-4082-89cd-bfd05817dea8)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(307).png?alt=media&token=5e960301-2f29-44d1-9660-2960cc34a3e1)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(308).png?alt=media&token=322c1fc1-7631-4493-aa28-77b86ca3dc33)
+
+## Search and Filter ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(312).png?alt=media&token=10f488ae-9b11-4906-a040-21e3cb8ce3f6)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(313).png?alt=media&token=2d8e22d3-ba1f-4d32-9018-a9eb159a20da)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(315).png?alt=media&token=ef7aa8b3-6596-40c4-9d40-3ed95157b815)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(316).png?alt=media&token=a94e6dd9-479f-4668-b5f5-82494117e2c2)
