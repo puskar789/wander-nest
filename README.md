@@ -28,6 +28,16 @@ Wander Nest is a full-stack web application designed to provide users with a sea
 # Screenshots 📸 #
 Here are some screenshots showcasing the Wander Nest web app:
 
+[Login and Sign Up Screen](#login-and-sign-up-screen)  
+[OTP Verification](#otp-verification)  
+[User Interface](#user-interface)  
+[Search and Filter](#search-and-filter)  
+[Adding a Room](#adding-a-room)  
+[User Profile](#user-profile)  
+[User Dashboard](#user-dashboard)  
+[Admin Dashboard](#admin-dashboard)
+
+
 ## Login and Sign Up Screen ##
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(64).png?alt=media&token=8d2912ee-e9d2-416f-a69d-94cbb6c89c12)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(66).png?alt=media&token=459dae94-2ea0-4003-9fb0-8c9413d7e8b8)
@@ -45,6 +55,12 @@ Here are some screenshots showcasing the Wander Nest web app:
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(63).png?alt=media&token=a294e696-e251-4d43-abba-1bfbab8962a0)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(74).png?alt=media&token=2fa48977-a8d1-4e95-89a9-81660bed6c2c)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(75).png?alt=media&token=df19a356-edde-4d1e-aec5-1cb20eb89fad)
+
+## Search and Filter ##
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(312).png?alt=media&token=10f488ae-9b11-4906-a040-21e3cb8ce3f6)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(313).png?alt=media&token=2d8e22d3-ba1f-4d32-9018-a9eb159a20da)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(315).png?alt=media&token=ef7aa8b3-6596-40c4-9d40-3ed95157b815)
+![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(316).png?alt=media&token=a94e6dd9-479f-4668-b5f5-82494117e2c2)
 
 ## Adding a Room ##
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(77).png?alt=media&token=36caf61d-57df-4f37-82e1-725f1caf07da)
@@ -72,9 +88,3 @@ Here are some screenshots showcasing the Wander Nest web app:
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(309).png?alt=media&token=5b694e9f-727c-4082-89cd-bfd05817dea8)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(307).png?alt=media&token=5e960301-2f29-44d1-9660-2960cc34a3e1)
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(308).png?alt=media&token=322c1fc1-7631-4493-aa28-77b86ca3dc33)
-
-## Search and Filter ##
-![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(312).png?alt=media&token=10f488ae-9b11-4906-a040-21e3cb8ce3f6)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(313).png?alt=media&token=2d8e22d3-ba1f-4d32-9018-a9eb159a20da)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(315).png?alt=media&token=ef7aa8b3-6596-40c4-9d40-3ed95157b815)
-![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(316).png?alt=media&token=a94e6dd9-479f-4668-b5f5-82494117e2c2)
