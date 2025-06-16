@@ -1,30 +1,29 @@
 # Wander Nest 🏡 #
 Wander far, nest easy.
 
-# Overview #
+# Overview 🚀 #
 Wander Nest is a full-stack web application designed to provide users with a seamless experience for browsing and managing rental rooms or accommodations. The application offers a dynamic, interactive interface for both regular users and administrators, featuring dashboards, user management, and room listings with images and map integrations. "WanderNest" symbolizes a comfortable and welcoming place for wanderers or travelers to temporarily settle in during their journeys. "Wander" signifies the act of exploring or traveling, while "Nest" suggests a cozy and secure resting place. Together, "WanderNest" conveys the idea of finding a comforting refuge amidst the adventure of wandering.
 
 # Features 🌟 #
 * **User Authentication & Authorization**: Secure sign-up and login using JWT and bcrypt. Users can also log in with their Google account via OAuth for a faster experience.
+* **OTP Verification**: Enhance account security with OTP-based email verification during sign-up implemented using Nodemailer, ensuring only valid users access the platform.
 * **Profile Management**: Users can update their profile details and manage sessions efficiently through a user-friendly interface.
-* **Room Listings & CRUD Operations**: Users and admins can create, view, and delete rental room listings with detailed descriptions, pricing, and amenities, admin can also ban users.
-* **Image Uploads & Carousels**: Generate random profile pictures on initial sign-up using the DiceBear API.
-* **Media Sharing**: Send images to other users easily using Firebase storage.
-* **Responsive Design**: Optimized for both desktop and mobile devices, ensuring a seamless experience no matter where you are.
-* **Notification System**: Get notified of new messages.
-* **Online Status**: Know when your friends are online and ready to chat.
-
-
+* **Room Listings & CRUD Operations**: Users and admins can create, view, and delete rental room listings with detailed descriptions, pricing, and amenities, allows easy image uploads by providing drag and drop feature implemented using react dropzone.
+* **Image Uploads & Carousels**: Upload multiple images for each roomm, facilitated by Firebase and view them in a beautiful, responsive Swiper.js-powered image carousel.
+* **Map Integration**: Pinpoint room locations using Mapbox geocoding, allowing users to visually locate listings on an interactive map.
+* **Admin Dashboard**: A dedicated analytics dashboard where admins can view user activity, room stats, and manage everything from one place using Recharts for visual insights, admin can also ban malicious users.
+* **Responsive UI Design**: Built with Tailwind CSS, Flowbite, and daisyUI, ensuring a modern, accessible experience.
+  
 # Tech Stack 🛠 #
-* **MongoDB**: A flexible, document-oriented database used to store user data and chat logs.
+* **MongoDB**: NoSQL database used to store user, room, and OTP related data.
 * **Express.js**: A fast, unopinionated, minimalist web framework for Node.js that handles the server-side logic and API routing.
 * **React.js**: A powerful JavaScript library for building user interfaces, providing a responsive and dynamic front-end experience.
-* **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling the server-side implementation of Ping Pal.
-* **Socket.io**: A library that enables real-time, bidirectional, and event-based communication between the browser and the server.
-* **Firebase**: A platform developed by Google for creating mobile and web applications, used here for profile picture updates, image sharing, and Google authentication.
+* **Tailwind CSS**: Utility-first CSS framework for designing custom UIs quickly and responsively.
+* **Flowbite & daisyUI**: Tailwind CSS-based component libraries that offer prebuilt UI elements to accelerate design.
+* **Mapbox**: Mapping platform used for geocoding and displaying interactive room locations on maps.
+* **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling the server-side implementation.
+* **Firebase**: A platform developed by Google for creating mobile and web applications, used here for profile picture updates and room images uploading.
 * **Zustand**: A small, fast, and scalable state-management solution for React applications.
-* **react-hot-toast**: A notification library used to enhance the user experience with responsive toast notifications.
-
 
 # Screenshots 📸 #
 Here are some screenshots showcasing the Ping Pal web app:
