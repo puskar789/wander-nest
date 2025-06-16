@@ -26,7 +26,7 @@ Wander Nest is a full-stack web application designed to provide users with a sea
 * **Zustand**: A small, fast, and scalable state-management solution for React applications.
 
 # Screenshots 📸 #
-Here are some screenshots showcasing the Ping Pal web app:
+Here are some screenshots showcasing the Wander Nest web app:
 
 ## Login and Sign Up Screen ##
 ![picture alt](https://firebasestorage.googleapis.com/v0/b/wander-nest-3a4ef.appspot.com/o/UI%2FScreenshot%20(64).png?alt=media&token=8d2912ee-e9d2-416f-a69d-94cbb6c89c12)
