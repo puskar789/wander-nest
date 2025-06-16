@@ -2,7 +2,7 @@
 Wander far, nest easy.
 
 # Overview 🚀 #
-Wander Nest is a full-stack web application designed to provide users with a seamless experience for browsing and managing rental rooms or accommodations. The application offers a dynamic, interactive interface for both regular users and administrators, featuring dashboards, user management, and room listings with images and map integrations. "WanderNest" symbolizes a comfortable and welcoming place for wanderers or travelers to temporarily settle in during their journeys. "Wander" signifies the act of exploring or traveling, while "Nest" suggests a cozy and secure resting place. Together, "WanderNest" conveys the idea of finding a comforting refuge amidst the adventure of wandering.
+Wander Nest is a full-stack web application designed to provide users with a seamless experience for browsing and managing rental rooms or accommodations. The application offers a dynamic, interactive interface for both regular users and administrators, featuring dashboards, user management, and room listings with images and map integrations. "WanderNest" symbolizes a comfortable and welcoming place for wanderers or travelers to temporarily settle in during their journeys.
 
 # Features 🌟 #
 * **User Authentication & Authorization**: Secure sign-up and login using JWT and bcrypt. Users can also log in with their Google account via OAuth for a faster experience.
